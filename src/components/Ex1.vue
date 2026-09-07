@@ -11,9 +11,9 @@
 <template>
     {{ message }} 
    
-    <label for=""> <input type="radio" name="fruit"> {{ fruit[0] }} </label> 
-    <label for=""> <input type="radio" name="fruit"> {{ fruit[1] }} </label> 
-    <label for=""><input type="radio" name="fruit"> {{ fruit[2] }} </label> 
+    <label for=""> <input type="radio" name="fruit"> {{ fruits[0] }} </label> 
+    <label for=""> <input type="radio" name="fruit"> {{ fruits[1] }} </label> 
+    <label for=""><input type="radio" name="fruit"> {{ fruits[2] }} </label> 
     
 </template>
 
