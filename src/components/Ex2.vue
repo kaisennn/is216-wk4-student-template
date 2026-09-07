@@ -2,20 +2,18 @@
     import { ref } from 'vue'
 
     // Add code here
-    import wad from '/assets/wad.png'
+    const width = ref("200")
+    const height = ref("200")
+    const myImg = ref("/assets/me.png")
 
-    const me = ref('/src/assets/me.png') 
-
-    const x = ref(200)
+    const obj = ref({
+        width : "200",
+        heiht : "200",
+        src : "/assets/me.png"
+    })
 </script>
 
 <template>
-    <div id="demo">
-        <img v-bind:src="wad"><hr>
-        <img v-bind:src="me"><hr>
-      
-        <img src="../assets/me.png" :width="x">
-    </div>
-    <!-- Add code here -->
-   
+    <img v-bind:src="myImg" :width = "width" :height = "height"/>
+    <img v-bind="obj"/>
 </template>
