@@ -2,7 +2,7 @@
     import { ref } from 'vue'
 
     // Add code here
-    const loginType = ref("Username login")
+    const loginType = ref("username")
     
 </script>
 
