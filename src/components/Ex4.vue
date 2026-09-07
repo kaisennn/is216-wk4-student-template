@@ -42,11 +42,18 @@
     <!-- note: need to use single quotes '' for classes such as btn-primary which contains '-' signs
                 because '-' is a minus operator for (Vue) JavaScript  -->
     <div id="part1">
-        <div :id="id" :class="{ blueBox: blueBox, redBox: !blueBox }">
+        <div :id="id" :class="blueBox ? 'blueBox' : 'redBox'">
             div ID : {{id}} 
         </div>
         
-        <button type="button" :class="{ 'btn-primary': blueBtn, 'btn-danger': !blueBtn }" v-on:click="changeColor">Change Color</button>
+        <button 
+            type="button" 
+            class="btn" 
+            :class="blueBtn ? 'btn-primary' : 'btn-danger'" 
+            v-on:click="changeColor"
+        >
+            Change Color
+        </button>
     </div>
 
     <div id="part2">
@@ -54,7 +61,14 @@
             div ID : {{id}} 
         </div>
        
-        <button type="button" :class="{ 'btn-danger': redBtn, 'btn-primary': !redBtn }" v-on:click="changeTextColor">Change Text Color</button> 
+        <button 
+            type="button" 
+            class="btn" 
+            :class="redBtn ? 'btn-danger' : 'btn-primary'" 
+            v-on:click="changeTextColor"
+        >
+            Change Text Color
+        </button> 
     </div>
 
 </template>
