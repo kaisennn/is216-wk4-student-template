@@ -8,7 +8,7 @@
 
     const obj = ref({
         width : "200",
-        heiht : "200",
+        height : "200",
         src : "/assets/me.png"
     })
 </script>
